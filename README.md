@@ -20,7 +20,7 @@ An automated data pipeline that fetches, processes, and analyzes MLB player stat
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/mlb-stats-pipeline.git
+   git clone https://github.com/cristinahh/mlb-stats-pipeline.git
    cd mlb-stats-pipeline
    
 2. Install the required Python packages:
