@@ -16,9 +16,9 @@ st.title("MLB Player Stats Dashboard")
 
 # Query data
 query = """
-SELECT name, team, hr, avg, g
+SELECT name, team, home_runs, batting_avg, games_played
 FROM player_stats
-ORDER BY hr DESC
+ORDER BY home_runs DESC
 LIMIT 10;
 """
 data = pd.read_sql(query, con=engine)
@@ -28,4 +28,4 @@ st.header("Top 10 Players by Home Runs")
 st.table(data)
 
 # Add a chart
-st.bar_chart(data.set_index("name")["hr"])
+st.bar_chart(data.set_index("name")["home_runs"])
