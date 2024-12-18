@@ -19,21 +19,39 @@ An automated data pipeline that fetches, processes, and analyzes MLB player stat
 
 ### Installation
 1. Clone this repository:
-   >> git clone https://github.com/your-username/mlb-stats-pipeline.git
-   >> cd mlb-stats-pipeline
+   ```bash
+   git clone https://github.com/your-username/mlb-stats-pipeline.git
+   cd mlb-stats-pipeline
    
-2. Install the required Python packages
-   >> pip install -r requirements.txt
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
    
 3. Set up the PostgreSQL database:
-  >> psql -U your_username
-  >> CREATE DATABASE mlb_stats;
+   ```bash
+   psql -U your_username
+4. Create a new database:
+   ```python
+   CREATE DATABASE mlb_stats;
 
-4. Run the script to fetch and process data:
-  >> python main.py
+5. Configure the script:
+   (update the database credentials in main.py to match your PostgreSQL setup)
+   ```python
+   DB_USERNAME = 'your_username'
+   DB_PASSWORD = 'your_password'
+   DB_HOST = 'localhost'
+   DB_PORT = '5432'
+   DB_NAME = 'mlb_stats'
+   ```
+
+7. Run the script to fetch and process data:
+   ```bash
+   python main.py
 
 5. Start the Streamlit dashboard:
-  >> streamlit run dashboard.py
+   ```bash
+   streamlit run dashboard.py
+
 
 ---
 
